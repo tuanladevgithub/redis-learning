@@ -4,7 +4,7 @@
 
 Redis là một open-source, cấu trúc dữ liệu lưu trữ in-memory và được sử dụng như một database, caching, message broker hoặc streaming engine.
 
-## 2. Redis dât types
+## 2. Redis data types
 
 ### 2.1. Strings
 
