@@ -14,7 +14,7 @@ Redis là một open-source, cấu trúc dữ liệu lưu trữ in-memory và đ
   - **SET** và **GET**
   - **INCR**, **INCRBY**, **DECR** và **DECRBY**: dùng để tăng giảm giá trị nguyên (increment)
 
-### 2.2. List
+### 2.2. Lists
 
 - Redis list là các **Linked List** của các giá trị string. Thường được sử dụng để:
   - Thực thi các stack và queue
@@ -28,7 +28,7 @@ Redis là một open-source, cấu trúc dữ liệu lưu trữ in-memory và đ
   - **BRPOP**, **BLPOP**: phiên bản blocking của **LPOP**, **RPOP**. Tức là nó sẽ chặn connection cho đến khi list không còn empty.
   - **LLEN**: trả về số phần tử của list
 
-### 2.3. Set
+### 2.3. Sets
 
 - Redis set là một tập hợp các unique string không có thứ tự. Có thể sử dụng set để:
 - The max size of a Redis set is 2^32 - 1 (4,294,967,295) members.
@@ -40,3 +40,15 @@ Redis là một open-source, cấu trúc dữ liệu lưu trữ in-memory và đ
   - **SDIFF**: trả về tập hợp các phần tử riêng nhất từ 2 hay nhiều set.
   - **SCARD**: trả về số phần tử của một set.
   - **SUNION**: trả về tập hợp hợp nhất từ 2 hay nhiều set.
+
+### 2.4. Hashes
+
+- Redis hash là loại bản ghi được cấu trúc dưới dạng tập hợp các cặp field-value. Nó có thể được dùng để đại diện cho một basic object hoặc lưu giữ một nhóm các bộ đếm (counter) và nhiều thứ khác.
+- Every hash can store up to 4,294,967,295 (2^32 - 1) field-value pairs.
+- Some commands:
+  - **HSET**, **HGET**
+  - **HINCRBY**: Increment giá trị integer của một field trong một hash bởi một số integer. Dùng giá trị 0 để khởi tạo nếu field không tồn tại.
+  - **HLEN**: trả về số field của hash
+  - **HKEYS**: trả về toàn bộ fields của hash
+  - **HEXISTS**: kiểm tra xem 1 field có tồn tại trong hash ko
+  - **HVALS**: trả về toàn bộ value trong hash 
