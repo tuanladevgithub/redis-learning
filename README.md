@@ -52,3 +52,11 @@ Redis là một open-source, cấu trúc dữ liệu lưu trữ in-memory và đ
   - **HKEYS**: trả về toàn bộ fields của hash
   - **HEXISTS**: kiểm tra xem 1 field có tồn tại trong hash ko
   - **HVALS**: trả về toàn bộ value trong hash 
+
+### 2.5. Sorted sets
+
+- Sorted set là tập hợp các unique strings được sắp xếp theo thứ tự liên quan để điểm. Khi có nhiều string có cùng số điểm (score) thì sẽ được sắp xếp theo thứ tự từ điển.
+- Các trường hợp sử dụng sorted set như:
+  - Leaderboards.
+  - Rate limits
+- Sorted set có thể được coi là được mix giữa **Sets** và **Hashes**. Nó giống với **Sets** bởi vì đều lưu trữ unique string và giống với **Hashes** bởi vì mỗi value trong **Sorted sets** đều được ánh xạ với một **score**.
